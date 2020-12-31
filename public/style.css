@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+@keyframes offset {
+    from {
+        transform: translate(20px, 20px);
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+:root {
+    --primary-color: #715bc1;
+    --secundary-color: #f7df1e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary-color);
+    font-family: Poppins;
+}
+
+header {
+    background-color: #fff;
+    padding: 32px;
+    width: 100%;
+    text-align: center;
+}
+
+.links a {
+    font-size: 22px;
+    text-decoration: none;
+    color: #777;
+    transition: .4s;
+    position: relative;
+}
+
+.links a + a {
+    margin-left: 32px;
+}
+
+.links a::before {
+    content: '';
+    position: absolute;
+    transition: .4s;
+    width: 0px;
+    left: 0;
+    bottom: -2px;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+
+.links a:hover::before {
+    width: 100%;
+}
+
+.links a:hover {
+    color: var(--primary-color);
+}
+
+.links a.active {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* card teatcher */
+.card {
+    opacity: 0;
+    max-width: 800px;
+    margin: 48px auto;
+    background-color: #fff;
+    min-height: 400px;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    animation: offset 1s forwards 1s;
+}
+
+.avatar {
+    background: url(https://source.unsplash.com/collection/646484/500x500) no-repeat center bottom / cover;
+}
+
+.details {
+    padding: 32px;
+}
+
+.details .item {
+    padding: 16px 0;
+    border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+}
+
+.details .item:last-child {
+    border: none;
+}
+
+.details h3,
+.details .item div:nth-child(1) {
+    font-size: 14px;
+    line-height: 24px;
+    color: #777;
+    letter-spacing: .7px;
+    font-weight: normal;
+}
+
+.details .item div:nth-child(2) {
+    color: #555;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.details h3 {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.details .item span {
+    padding: 8px 16px;
+    background-color: var(--secundary-color);
+    border-radius: 16px;
+    color: #777;
+    margin-right: 4px;
+    margin-top: 8px;
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+}
