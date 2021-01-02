@@ -19,7 +19,7 @@ Esse repositório serve para armazenar os códigos criados durante meus estudos 
 
 ## :robot: Tecnologias
 
-As tecnologias compartilhadas entre os projetos são:
+As tecnologias compartilhadas entre os desafios são:
 
 * Express - Dependência utilizada para criar e gerenciar nosso servidor HTTP;
 * Nunjucks - Dep. Utilizada como Template Engine, para usufruirmos de um HTML dinâmico;
