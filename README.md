@@ -15,16 +15,17 @@
 
 ## :rocket: Sobre o Repositório
 
-Esse repositório serve para armazenar os códigos criados durante meus estudos do quarto módulo do curso LaunchBase - [RocketSeat](https://rocketseat.com.br/). Nessa etapa do curso estamos Desenvolvendo uma aplicação web que conecta Personal Trainers cadastrados aos alunos. Cada pasta corresponde a um desafio proposto e contém mais informações sobre sua proposta e também as soluções encontradas para cada um. Elas documentarão o que está sendo aprendido e o caminho percorrido até o projeto final desse módulo.
+Esse repositório serve para armazenar os códigos criados durante meus estudos do quarto módulo do curso LaunchBase - [RocketSeat](https://rocketseat.com.br/). Nessa etapa do curso estamos Desenvolvendo uma aplicação web que conecta os Personal Trainers cadastrados aos alunos interessados. Cada pasta corresponde a um desafio proposto, contém mais informações sobre sua proposta e também as soluções encontradas para cada um, além de detalhes sobre como baixar e rodar o projeto em sua máquina. Essas pastas também documentarão o que está sendo aprendido e o caminho percorrido até o projeto final desse módulo.
 
 ## :robot: Tecnologias
 
 As tecnologias compartilhadas entre os projetos são:
 
-* Express - Para criar e gerenciar nosso servidor HTTP
-* Nodemon - Dependência que reinicia o servidor a cada atualização nos arquivos observados
-* Browser Sync - Dependência que atualiza o navegador a cada atualização nas pastas observadas
-* NPM Run All - Dependência que possibilita rodar paralelamente o Nodemon e o Browser Sync
+* Express - Dependência utilizada para criar e gerenciar nosso servidor HTTP;
+* Nunjucks - Dep. Utilizada como Template Engine, para usufruirmos de um HTML dinâmico;
+* Nodemon - Dep. que reinicia o servidor a cada atualização nos arquivos observados;
+* Browser Sync - Dep. que atualiza o navegador a cada atualização nas pastas observadas;
+* NPM Run All - Dep. que possibilita rodar paralelamente o Nodemon e o Browser Sync;
 * HTML, CSS e JavaScript
 
 ## :telephone_receiver: Contatos
