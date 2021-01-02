@@ -4,8 +4,8 @@
 
 <p align="center">
   <a href="https://github.com/caique-dev/repositorioDeEstudos-2#rocket-sobre-o-reposit%C3%B3rio">Sobre o repositório</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#calendar-entrega">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-licença">Contatos</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#robot-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#telephone_receiver-contatos">Contatos</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-licença">Licença</a>
 </p>
 
@@ -27,7 +27,7 @@ As tecnologias compartilhadas entre os projetos são:
 * NPM Run All - Dependência que possibilita rodar paralelamente o Nodemon e o Browser Sync
 * HTML, CSS e JavaScript
 
-## :telephone_receiver: Contato
+## :telephone_receiver: Contatos
 
 [![Linkedin Badge](https://img.shields.io/badge/-caique_andrade-blue?style=for-the-badge&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/caique-andrade-8a8153189/)](https://www.linkedin.com/in/caique-andrade-8a8153189/)
 [![Linkedin Badge](https://img.shields.io/badge/-caiquepinheiro@icloud.com-red?style=for-the-badge&logo=Gmail&logoColor=white&link=mailto:caiquepinheiro@icloud.com)](mailto:caiquepinheiro@icloud.com)
