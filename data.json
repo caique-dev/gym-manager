@@ -1,0 +1,13 @@
+{
+  "instructors": [
+    {
+      "id": 1,
+      "name": "asdfasdf'",
+      "gender": "M",
+      "birth": -60770563200000,
+      "services": "crossfit, malhação",
+      "avatar_url": "https://tteste",
+      "created_at": 1609535838272
+    }
+  ]
+}

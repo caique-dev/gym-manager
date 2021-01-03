@@ -1,0 +1,44 @@
+{% extends 'layout.njk' %}
+
+{% block content %}
+    <form method="POST" action="/instructors" class="card">
+        <div class="avatar" style="background: url(https://source.unsplash.com/collection/3621148/900x900) no-repeat center / cover"></div>
+
+        <div class="details">
+            <h3>Novo(a) instrutor(a)</h3>
+
+            <div class="item">
+                <div>Avatar</div>
+                <div><input type="url" name="avatar_url" placeholder="https://"></div>
+            </div>
+
+            <div class="item">
+                <div>Nome</div>
+                <div><input type="text" name="name"></div>
+            </div>
+
+            <div class="item">
+                <div>Data de nascimento</div>
+                <div><input type="date" name="birth"></div>
+            </div>
+
+
+            <div class="item">
+                <div>Sexo</div>
+                <div>
+                    <span><input type="radio" name="gender" value="M">Masculino</span>
+                    <span><input type="radio" name="gender" value="M" checked>Feminino</span>
+                </div>
+            </div>
+
+            <div class="item">
+                <div>Área de atuação</div>
+                <div>
+                    <input type="text" name="services" placeholder="Separe as especializações por vírgula">
+                </div>
+            </div>
+
+            <button type="submit">Salvar</button>
+        </div>
+    </form>    
+{% endblock content %}
