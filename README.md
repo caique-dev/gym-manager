@@ -30,23 +30,23 @@ Esse projeto está sendo desenvolvido durante o curso LaunchBase - [RocketSeat](
 ## :zap: Como executar essa aplicação em sua máquina
 
 ```bash
-# Instalar o NodeJS (Versão LTS)
+# Instale o NodeJS (Versão LTS)
 https://nodejs.org/en/
 
-# Instalar o GIT para Windows ou Mac
+# Instale o GIT para Windows ou Mac
 https://gitforwindows.org/
 https://git-scm.com/download/mac
 
-# Clonar o repositório
+# Acesse o git bash e clone o repositório
 git clone https://github.com/caique-dev/gym-manager
 
-# Entrar no diretório
+# Ainda no terminal, entre no diretório
 cd gym-manager
 
-# Baixar as dependências
+# Baixe as dependências
 npm install
 
-# Executar o servidor
+# Execute o servidor
 npm start
 
 # No seu terminal deve aparecer
