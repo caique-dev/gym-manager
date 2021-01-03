@@ -9,7 +9,7 @@
 <p align="center">
   <a href="#rocket-sobre-a-aplica%C3%A7%C3%A3o">Sobre a aplicação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#robot-tecnologias-utilizadas">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#zap-como-executar-essa-aplicacao-em-sua-maquina">Como executar em sua máquina</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#zap-como-executar-essa-aplica%C3%A7%C3%A3o-em-sua-m%C3%A1quina">Como executar em sua máquina</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#telephone_receiver-contatos">Contatos</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-licença">Licença</a>
 </p>
