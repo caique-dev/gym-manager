@@ -3,24 +3,22 @@
 </h1>
 
 <h2 align="center">
-    <img alt="Launchbase" src="https://storage.googleapis.com/golden-wind/bootcamp-launchbase/logo.png" width="300px" />
+    <img alt="Launchbase" src="https://storage.googleapis.com/golden-wind/bootcamp-launchbase/logo.png" width="250px" />
 </h2>
 
 <p align="center">
-  <a href="https://github.com/caique-dev/repositorioDeEstudos-2#rocket-sobre-o-reposit%C3%B3rio">Sobre o repositório</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#robot-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#robot-tecnologias">Como executar a aplicação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-sobre-o-projeto">Sobre a aplicação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#robot-tecnologias-utilizadas">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#zap-como-executar-essa-aplicacao-em-sua-maquina">Como executar a aplicação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#telephone_receiver-contatos">Contatos</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-licença">Licença</a>
 </p>
 
-## :rocket: Sobre o projeto
+## :rocket: Sobre a aplicação
 
-Esse projeto está sendo desenvolvido durante o quarto módulo do curso LaunchBase - [RocketSeat](https://rocketseat.com.br/). A aplicação **Gym Manager** visa conectar os Personal Trainers cadastrados na plataforma aos alunos interessados. Nessa etapa do curso estamos aprendendo a criar um servidor HTTP com *Express* e também tudo que é necessário para gerenciarmos esse servidor, desde a criação das rotas, persistência dos dados e etc até a configuração e utilização do *Nunjucks*, o template engine utilizado para deixar o HTML mais dinâmico e flexível.
+Esse projeto está sendo desenvolvido durante o curso LaunchBase - [RocketSeat](https://rocketseat.com.br/). A aplicação **Gym Manager** visa conectar os Personal Trainers cadastrados na plataforma aos alunos interessados. Nessa etapa do curso estamos aprendendo a criar um servidor HTTP com *Express* e também tudo que é necessário para gerenciarmos esse servidor, desde a criação das rotas, persistência dos dados e etc até a configuração e utilização do *Nunjucks*, o template engine utilizado para deixar o HTML mais dinâmico e flexível.
 
-## :robot: Tecnologias
-
-As tecnologias compartilhadas entre os desafios são:
+## :robot: Tecnologias utilizadas
 
 * Express - Dependência utilizada para criar e gerenciar nosso servidor HTTP;
 * Nunjucks - Dep. Utilizada como Template Engine, para usufruirmos de um HTML dinâmico;
@@ -29,7 +27,7 @@ As tecnologias compartilhadas entre os desafios são:
 * NPM Run All - Dep. que possibilita rodar paralelamente o Nodemon e o Browser Sync;
 * HTML, CSS e JavaScript
 
-## ⌨ Como executar essa aplicação em sua máquina
+## :zap: Como executar essa aplicação em sua máquina
 
 ```bash
 # Instalar o NodeJS (Versão LTS)
