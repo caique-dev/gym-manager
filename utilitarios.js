@@ -12,12 +12,14 @@ module.exports = {
     
         return age
     },
-    date: (timestemp) => {
-        const data = new Date(timestemp)
-        const dia = `0${data.getDate()}`.slice(-2)
-        const mes = `0${data.getMonth() + 1}`.slice(-2)
-        const ano = data.getFullYear()
+    date: (timestemp, input) => {
+        const date = new Date(timestemp)
+        const day = `0${date.getUTCDate()}`.slice(-2)
+        const month = `0${date.getUTCMonth() + 1}`.slice(-2)
+        const year = date.getUTCFullYear()
 
-        return `${dia}/${mes}/${ano}`
+        if (input) return `${year}-${month}-${day}`
+
+        return `${day}/${month}/${year}`
     }
 }

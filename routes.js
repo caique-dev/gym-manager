@@ -4,28 +4,31 @@ const instructors = require('./instructors')
 const routes = express.Router()
 
 routes.get('/', (req, res) => {
-    res.redirect('/instructors')
+    return res.redirect('/instructors')
 })
 
 routes.get('/instructors', (req, res) => {
-    res.render('instructors/index')
+    return res.render('instructors/index')
 })
 
 routes.get('/instructors/:id', instructors.show)
 
+routes.get('/instructors/:id/edit', instructors.edit)
+
 routes.get('/members', (req, res) => {
-    res.send('members')
+    return res.send('members')
 })
 
 routes.get('/create', (req, res) => {
-    res.render('instructors/create.njk')
+    const instructor = { gender: 'F'}
+    return res.render('instructors/create.njk', { instructor })
 })
 
 routes.post('/instructors', instructors.post)
 
 // error 404
 routes.use((req, res) => {
-    res.status(404).render("not-found");
+    return res.status(404).render("not-found");
 });
 
 module.exports = routes
