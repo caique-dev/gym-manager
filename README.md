@@ -68,5 +68,7 @@ Feito isso, abra o seu navegador e acesse `http://localhost:5000/`
 ## :memo: Licença
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](../LICENSE) para mais detalhes.
+
 ---
+
 Desenvolvido com :heart: por Caique Andrade
