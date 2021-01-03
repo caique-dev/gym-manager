@@ -7,16 +7,16 @@
 </h2>
 
 <p align="center">
-  <a href="#rocket-sobre-o-projeto">Sobre a aplicação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-sobre-a-aplica%C3%A7%C3%A3o">Sobre a aplicação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#robot-tecnologias-utilizadas">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#zap-como-executar-essa-aplicacao-em-sua-maquina">Como executar a aplicação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#zap-como-executar-essa-aplicacao-em-sua-maquina">Como executar em sua máquina</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#telephone_receiver-contatos">Contatos</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-licença">Licença</a>
 </p>
 
 ## :rocket: Sobre a aplicação
 
-Esse projeto está sendo desenvolvido durante o curso LaunchBase - [RocketSeat](https://rocketseat.com.br/). A aplicação **Gym Manager** visa conectar os Personal Trainers cadastrados na plataforma aos alunos interessados. Nessa etapa do curso estamos aprendendo a criar um servidor HTTP com *Express* e também tudo que é necessário para gerenciarmos esse servidor, desde a criação das rotas, persistência dos dados e etc até a configuração e utilização do *Nunjucks*, o template engine utilizado para deixar o HTML mais dinâmico e flexível.
+Esse projeto está sendo desenvolvido durante o curso LaunchBase - [RocketSeat](https://rocketseat.com.br/). A aplicação **Gym Manager** visa conectar os Personal Trainers cadastrados na plataforma aos alunos interessados. Nessa etapa do curso estamos aprendendo a criar um servidor HTTP com *Express* e também tudo que é necessário para gerenciarmos esse servidor, desde a criação das rotas, persistência dos dados e etc até a configuração e utilização do *Nunjucks*, o template engine utilizado para deixar o HTML mais dinâmico e flexível. **Ainda em desenvolvimento**.
 
 ## :robot: Tecnologias utilizadas
 
