@@ -1,15 +1,6 @@
 {
   "instructors": [
     {
-      "id": 1,
-      "name": "asdfasdf'",
-      "gender": "F",
-      "birth": -60770563200000,
-      "services": "crossfit, malhação",
-      "avatar_url": "https://tteste",
-      "created_at": 1609535838272
-    },
-    {
       "id": 2,
       "name": "developer",
       "gender": "M",
@@ -35,15 +26,6 @@
       "services": "crossfit, malhação, asdf",
       "avatar_url": "https://tteste.sadf",
       "created_at": 1609698547325
-    },
-    {
-      "id": 5,
-      "name": "teste data 2",
-      "gender": "F",
-      "birth": 1594080000000,
-      "services": "crossfit, malhação, asdf",
-      "avatar_url": "https://tteste.sadf",
-      "created_at": 1609698688835
     }
   ]
 }

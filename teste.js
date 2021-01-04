@@ -12,14 +12,11 @@
 
 const obj = {
     nome: 'Caique',
-    sobreNome: 'Andrade',
-    idade: 17
+    sobreNome: 'Andrade'
 }
 
-var sobreNome, nome
+const teste = obj
 
-var { sobreNome, ...nome } = obj
+obj.nome = 'tontao'
 
-var [ indice1, ...indice2 ] = arr
-
-console.log(sobreNome, nome) // Caique, Andrade, 17
+console.log(teste) // { nome: 'Carlão', sobreNome: 'Andrade' }

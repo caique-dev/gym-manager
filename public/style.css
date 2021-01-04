@@ -169,3 +169,8 @@ button[type="submit"],
     text-align: center;   
     text-decoration: none;
 }
+
+#form_delete button {
+    margin-top: 8px;
+    background-color: rgb(179, 74, 74);
+}

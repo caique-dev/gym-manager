@@ -1,4 +1,4 @@
-const { EIDRM } = require('constants')
+// const { EIDRM } = require('constants')
 const fs = require('fs')
 const data = require('./data.json')
 const { age, date } = require('./utilitarios')
@@ -30,7 +30,7 @@ exports.post = (req, res) => {
 
     fs.writeFile('data.json', JSON.stringify(data, null, 2), error => {
         if (error) res.send('Deu erro na escrita do arquivo!!')
-        return res.redirect('/instructors')
+        return res.redirect(`/instructors/${id}`)
     })
 }
 
@@ -67,4 +67,48 @@ exports.edit = (req, res) => {
     }
 
     return res.render('instructors/edit', { instructor })
+}
+
+// atualização do casdatro no data
+exports.put = (req, res) => {
+    const  { id } = req.body
+    let index 
+
+    const foundInstructor = data.instructors.find( ( instructor, foundIndex ) => {
+        if (instructor.id == id) {
+            index = foundIndex
+            return true
+        }
+    })
+
+    if (!foundInstructor) return res.send('Instrutor(a) não encontrado!')
+
+    const instructor = {
+        ...foundInstructor,
+        ...req.body,
+        birth: Date.parse(req.body.birth)
+    }
+
+    data.instructors[index] = instructor
+
+    fs.writeFile('data.json', JSON.stringify(data, null, 2), (error) => {
+        if (error) return res.send('Erro na escrita do arquivo')
+
+        return res.redirect(`/instructors/${id}`)
+    })        
+}
+
+// remoção do perfil
+exports.delete = (req, res) => {
+    const { id } = req.body
+
+    const filteredInstructors = data.instructors.filter( instructor => instructor.id != id )
+
+    data.instructors = filteredInstructors
+
+    fs.writeFile('data.json', JSON.stringify(data, null, 2), (error) => {
+        if (error) return res.send('Erro na gravação do arquivo')
+
+        return res.redirect('/')
+    })
 }

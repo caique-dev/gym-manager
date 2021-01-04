@@ -26,6 +26,10 @@ routes.get('/create', (req, res) => {
 
 routes.post('/instructors', instructors.post)
 
+routes.put('/instructors', instructors.put)
+
+routes.delete('/instructors', instructors.delete)
+
 // error 404
 routes.use((req, res) => {
     return res.status(404).render("not-found");
