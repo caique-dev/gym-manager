@@ -120,7 +120,7 @@ header {
     color: var(--primary-color);
 }
 
-.details .item span {
+.details .item span, .table_container tbody td span {
     padding: 8px 16px;
     background-color: var(--secundary-color);
     border-radius: 16px;
@@ -199,6 +199,11 @@ button[type="submit"],
     border-bottom: solid 1px #d9d9d9;
 }
 
+.table_container tr {
+    display: grid;
+    grid-template-columns: 180px 1fr 86px;
+}
+
 .table_container tbody tr:last-child {
     border: none;
 }
@@ -217,6 +222,12 @@ button[type="submit"],
     border-radius: 50%;
     border: solid 2px #fff;
     box-shadow: -3px 2px 5px 0px rgba(0, 0, 0, 0.5); 
+}
+
+.table_container tbody tr td:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .table_container tbody tr td a {

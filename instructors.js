@@ -5,13 +5,13 @@ const { age, date } = require('./utilitarios')
 
 // listagem
 exports.list = (req, res) => {
-    // let instructors = [...data.instructors]
+    let instructors = [...data.instructors]
 
-    // instructors = instructors.map( instructor => instructor.services.split(','))
+    for (let instructor of data.instructors) {
+        instructor.services = instructor.services.split(',')
+    }
 
-    // console.log(instructors[0])
-
-    return res.render('instructors/index', { instructors: data.instructors })
+    return res.render('instructors/index', { instructors })
 }
 
 // cadastro
