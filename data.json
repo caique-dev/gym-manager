@@ -1,21 +1,12 @@
 {
   "instructors": [
     {
-      "id": 2,
-      "name": "developer",
-      "gender": "M",
-      "birth": -37631260800000,
-      "services": "crossfit, malhação, natação",
-      "avatar_url": "https://tteste.sadf",
-      "created_at": 1609642487510
-    },
-    {
       "id": 3,
       "name": "deve",
       "gender": "M",
-      "birth": 1054080000000,
+      "birth": 959472000000,
       "services": "crossfit, malhação, asdf",
-      "avatar_url": "https://source.unsplash.com/collection/3621148/900x900",
+      "avatar_url": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8Zml0bmVzc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
       "created_at": 1609687082427
     },
     {
@@ -24,7 +15,7 @@
       "gender": "F",
       "birth": 81278035200000,
       "services": "crossfit, malhação, asdf",
-      "avatar_url": "https://tteste.sadf",
+      "avatar_url": "https://images.unsplash.com/photo-1594381898411-846e7d193883?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8Zml0bmVzc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
       "created_at": 1609698547325
     }
   ]

@@ -3,6 +3,17 @@ const fs = require('fs')
 const data = require('./data.json')
 const { age, date } = require('./utilitarios')
 
+// listagem
+exports.list = (req, res) => {
+    // let instructors = [...data.instructors]
+
+    // instructors = instructors.map( instructor => instructor.services.split(','))
+
+    // console.log(instructors[0])
+
+    return res.render('instructors/index', { instructors: data.instructors })
+}
+
 // cadastro
 exports.post = (req, res) => {
     const keys = Object.keys(req.body)
@@ -44,7 +55,6 @@ exports.show = (req, res) => {
 
     const instructor = {
         ...foundInstructor,
-        avatar_url: 'https://source.unsplash.com/collection/3621148/900x900', // só para não deixar os cadastros sem foto 
         age: age(foundInstructor.birth),
         services: foundInstructor.services.split(','),
         created_at: date(foundInstructor.created_at)
@@ -53,7 +63,7 @@ exports.show = (req, res) => {
     return res.render('instructors/show', { instructor })
 }
 
-// edição
+// edição - apenas mostra os dados para editar
 exports.edit = (req, res) => {
     const { id } = req.params
 
@@ -86,7 +96,8 @@ exports.put = (req, res) => {
     const instructor = {
         ...foundInstructor,
         ...req.body,
-        birth: Date.parse(req.body.birth)
+        birth: Date.parse(req.body.birth),
+        id: +foundInstructor.id
     }
 
     data.instructors[index] = instructor
