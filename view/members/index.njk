@@ -2,7 +2,7 @@
 
 {% block content %}
     <section class="card table_container">
-        <a href="/instructors/create">Novo</a>
+        <a href="/members/create">Novo</a>
 
         <table>
             <thead>
@@ -24,7 +24,7 @@
                                 <span>{{ service }}</span>
                             {% endfor %} #}
 
-                            {{ instructor.services }}
+                            {{ members.services }}
                         </td>
                         <td><a href="/instructors/{{ instructor.id }}">Ver</a></td>
                     </tr>

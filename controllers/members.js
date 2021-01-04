@@ -1,17 +1,23 @@
 // const { EIDRM } = require('constants')
 const fs = require('fs')
-const data = require('./data.json')
-const { age, date } = require('./utilitarios')
+const data = require('../data.json')
+const { age, date } = require('../utilitarios')
+
+// leva para a page de criacao
+exports.create = (req, res) => {
+    const instructor = { gender: 'F'}
+    return res.render('members/create.njk', { member })
+}
 
 // listagem
 exports.list = (req, res) => {
-    let instructors = [...data.instructors]
+    // let members = [...data.members]
 
-    for (let instructor of data.instructors) {
-        instructor.services = instructor.services.split(',')
-    }
+    // for (let member of data.members) {
+    //     member.services = member.services.split(',')
+    // } está dando erros aleatórios
 
-    return res.render('instructors/index', { instructors })
+    return res.render('members/index', { members: data.members })
 }
 
 // cadastro
@@ -25,11 +31,11 @@ exports.post = (req, res) => {
     
     req.body.birth = Date.parse(req.body.birth)
     req.body.created_at = Date.now()
-    req.body.id = Number(data.instructors.length + 1)
+    req.body.id = Number(data.members.length + 1)
 
     const { id, avatar_url, name, birth, gender, services, created_at } = req.body
     
-    data.instructors.push({
+    data.members.push({
         id,
         name,
         gender,
@@ -41,7 +47,7 @@ exports.post = (req, res) => {
 
     fs.writeFile('data.json', JSON.stringify(data, null, 2), error => {
         if (error) res.send('Deu erro na escrita do arquivo!!')
-        return res.redirect(`/instructors/${id}`)
+        return res.redirect(`/members/${id}`)
     })
 }
 
@@ -49,34 +55,32 @@ exports.post = (req, res) => {
 exports.show = (req, res) => {
     const { id } = req.params
 
-    const foundInstructor = data.instructors.find(instructor => instructor.id == id)
+    const foundMember = data.members.find(member => member.id == id)
 
-    if (!foundInstructor) return res.send('Instrutor não encontrado')
+    if (!foundMember) return res.send('Instrutor não encontrado')
 
-    const instructor = {
-        ...foundInstructor,
-        age: age(foundInstructor.birth),
-        services: foundInstructor.services.split(','),
-        created_at: date(foundInstructor.created_at)
+    const member = {
+        ...foundMember,
+        age: age(foundMember.birth)
     }
 
-    return res.render('instructors/show', { instructor })
+    return res.render('members/show', { member })
 }
 
 // edição - apenas mostra os dados para editar
 exports.edit = (req, res) => {
     const { id } = req.params
 
-    const foundInstructor = data.instructors.find(instructor => instructor.id == id)
+    const foundMember = data.members.find(member => member.id == id)
 
-    if (!foundInstructor) return res.send('Instrutor não encontrado')
+    if (!foundMember) return res.send('Instrutor não encontrado')
 
-    const instructor = {
-        ...foundInstructor,
-        birth: date(foundInstructor.birth, true)
+    const member = {
+        ...foundMember,
+        birth: date(foundMember.birth, true)
     }
 
-    return res.render('instructors/edit', { instructor })
+    return res.render('members/edit', { member })
 }
 
 // atualização do casdatro no data
@@ -84,28 +88,28 @@ exports.put = (req, res) => {
     const  { id } = req.body
     let index 
 
-    const foundInstructor = data.instructors.find( ( instructor, foundIndex ) => {
-        if (instructor.id == id) {
+    const foundMember = data.members.find( ( member, foundIndex ) => {
+        if (member.id == id) {
             index = foundIndex
             return true
         }
     })
 
-    if (!foundInstructor) return res.send('Instrutor(a) não encontrado!')
+    if (!foundMember) return res.send('Instrutor(a) não encontrado!')
 
-    const instructor = {
-        ...foundInstructor,
+    const member = {
+        ...foundMember,
         ...req.body,
         birth: Date.parse(req.body.birth),
-        id: +foundInstructor.id
+        id: +foundMember.id
     }
 
-    data.instructors[index] = instructor
+    data.members[index] = member
 
     fs.writeFile('data.json', JSON.stringify(data, null, 2), (error) => {
         if (error) return res.send('Erro na escrita do arquivo')
 
-        return res.redirect(`/instructors/${id}`)
+        return res.redirect(`/members/${id}`)
     })        
 }
 
@@ -113,9 +117,9 @@ exports.put = (req, res) => {
 exports.delete = (req, res) => {
     const { id } = req.body
 
-    const filteredInstructors = data.instructors.filter( instructor => instructor.id != id )
+    const filteredMembers = data.members.filter( member => member.id != id )
 
-    data.instructors = filteredInstructors
+    data.members = filteredMembers
 
     fs.writeFile('data.json', JSON.stringify(data, null, 2), (error) => {
         if (error) return res.send('Erro na gravação do arquivo')
