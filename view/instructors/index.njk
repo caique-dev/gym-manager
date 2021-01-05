@@ -20,11 +20,11 @@
                             {{ instructor.name }}
                         </td>
                         <td>
-                            {# {% for service in instructor.services %}
+                            {% for service in instructor.services %}
                                 <span>{{ service }}</span>
-                            {% endfor %} #}
+                            {% endfor %}
 
-                            {{ instructor.services }}
+                            {# {{ instructor.services }} #}
                         </td>
                         <td><a href="/instructors/{{ instructor.id }}">Ver</a></td>
                     </tr>

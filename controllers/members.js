@@ -1,21 +1,26 @@
 // const { EIDRM } = require('constants')
 const fs = require('fs')
 const data = require('../data.json')
-const { age, date } = require('../utilitarios')
+const { age, date, blood_type } = require('../utilitarios')
 
 // leva para a page de criacao
 exports.create = (req, res) => {
-    const instructor = { gender: 'F'}
+    const member = { gender: 'F'}
     return res.render('members/create.njk', { member })
 }
 
 // listagem
 exports.list = (req, res) => {
-    // let members = [...data.members]
+    const members = []
 
-    // for (let member of data.members) {
-    //     member.services = member.services.split(',')
-    // } está dando erros aleatórios
+    for (let index = 0; index < data.members.length; index++) {
+        if (data.members[index].services) {
+            members[index] = {
+                ...data.members[index],
+                services: data.members[index].services.split(',')
+            }
+        }
+    }
 
     return res.render('members/index', { members: data.members })
 }
@@ -27,22 +32,18 @@ exports.post = (req, res) => {
     for (let key of keys) {
         if (req.body[key] == "") return res.send(`O campo "${key}" está vazio. Por favor, preencha todos os campos.`)
     }
-
     
-    req.body.birth = Date.parse(req.body.birth)
-    req.body.created_at = Date.now()
-    req.body.id = Number(data.members.length + 1)
+    let birth = Date.parse(req.body.birth)
 
-    const { id, avatar_url, name, birth, gender, services, created_at } = req.body
+    let id = 1
+    const lastMember = data.members[data.members.length - 1]
+    
+    if (lastMember) ìd = lastMember.id + 1
     
     data.members.push({
         id,
-        name,
-        gender,
-        birth,
-        services,
-        avatar_url,
-        created_at
+        ...req.body,
+        birth
     })
 
     fs.writeFile('data.json', JSON.stringify(data, null, 2), error => {
@@ -61,6 +62,8 @@ exports.show = (req, res) => {
 
     const member = {
         ...foundMember,
+        birth: date(foundMember.birth).birth,
+        blood_type: blood_type(foundMember.blood_type),
         age: age(foundMember.birth)
     }
 
@@ -77,7 +80,7 @@ exports.edit = (req, res) => {
 
     const member = {
         ...foundMember,
-        birth: date(foundMember.birth, true)
+        birth: date(foundMember.birth).ISO
     }
 
     return res.render('members/edit', { member })

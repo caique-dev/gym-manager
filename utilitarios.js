@@ -12,14 +12,46 @@ module.exports = {
     
         return age
     },
-    date: (timestemp, input) => {
+    date: (timestemp) => {
         const date = new Date(timestemp)
         const day = `0${date.getUTCDate()}`.slice(-2)
         const month = `0${date.getUTCMonth() + 1}`.slice(-2)
         const year = date.getUTCFullYear()
 
-        if (input) return `${year}-${month}-${day}`
+        return {
+            desde: `${day}/${month}/${year}`,
+            ISO: `${year}-${month}-${day}`,
+            birth: `${day}/${month}`
+        }
+    },
+    blood_type: (blood_type) => {
+        switch (blood_type) {
+            case 'A1':
+                return 'A+'
+                break;
 
-        return `${day}/${month}/${year}`
+            case 'A0':
+                return 'A-'
+                break;
+                
+            case 'AB1':
+                return 'AB+'
+                break;
+                
+            case 'AB0':
+                return 'AB-'
+                break;
+                
+            case 'O1':
+                return 'O+'
+                break;
+                
+            case 'O0':
+                return 'O-'
+                break;
+
+            default:
+                break;
+        }
     }
 }

@@ -11,13 +11,18 @@ exports.create = (req, res) => {
 
 // listagem
 exports.list = (req, res) => {
-    // let instructors = [...data.instructors]
+    const instructors = []
 
-    // for (let instructor of data.instructors) {
-    //     instructor.services = instructor.services.split(',')
-    // }
+    for (let index = 0; index < data.instructors.length; index++) {
+        if (data.instructors[index].services) {
+            instructors[index] = {
+                ...data.instructors[index],
+                services: data.instructors[index].services.split(',')
+            }
+        }
+    }
 
-    return res.render('instructors/index', { instructors: data.instructors })
+    return res.render('instructors/index', { instructors })
 }
 
 // cadastro
@@ -63,7 +68,7 @@ exports.show = (req, res) => {
         ...foundInstructor,
         age: age(foundInstructor.birth),
         services: foundInstructor.services.split(','),
-        created_at: date(foundInstructor.created_at)
+        created_at: date(foundInstructor.created_at).desde
     }
 
     return res.render('instructors/show', { instructor })
@@ -79,7 +84,7 @@ exports.edit = (req, res) => {
 
     const instructor = {
         ...foundInstructor,
-        birth: date(foundInstructor.birth, true)
+        birth: date(foundInstructor.birth).ISO
     }
 
     return res.render('instructors/edit', { instructor })
