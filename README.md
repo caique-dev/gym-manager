@@ -18,13 +18,12 @@
 
 Esse projeto foi desenvolvido durante o curso LaunchBase - [RocketSeat](https://rocketseat.com.br/). A aplicação **Gym Manager** visa conectar Personal Trainers e alunos apaixonados pelo mundo fitness. Nessa etapa do curso estamos aprendendo a criar um servidor HTTP com *Express* e também tudo que é necessário para gerenciá-lo, como criação das rotas, persistência dos dados e configuração de um tamplate engine, no caso, o *Nunjucks*. As partes mais importantes do projeto já estão prontas, como o cadastro, edição e listagem dos perfis, mas ainda quero adicionar mais funcionalidades. **Quase finalizado**.
 
-# :runnig: Ideias que ainda vou implementar:
+## :running: Ideias que ainda vou implementar:
 
 * Responsividade - Nos dias de hoje os celulares são muito utilizados para acessar a internet, por isso a reponsividade é indispensável;
 * Aprimoramento dos formulários de cadastro - Melhorar a experiência do usuário na página de cadastro, através do aprimoramento do formulário;
-* Estratificar todas as folhas de estilo - Deixar a estilização da aplicação mais organizada, separando todas as folhas de estilo por página ou seção;
-
-
+* Estratificar todas as folhas de estilo - Organizar melhor o estilo da aplicação, separando todas as folhas de estilo por página ou seção;
+* Melhoria na comunicação - Melhorar a comunição entre instrutores e alunos cadastrados, através de um chat na própria plataforma ou outras soluções.
 
 ## :robot: Tecnologias utilizadas
 
