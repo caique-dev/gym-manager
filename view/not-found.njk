@@ -1,9 +1,14 @@
 {% extends 'layout.njk' %}
 
 {% block head %}
-    <title>404</title>
+    <title>404 Not found</title>
 {% endblock %}
 
 {% block content %}
-    <h1>{{ message }}</h1>
+    <div class="centralized">
+        <div class="not_found">
+            <img id="error-page-hh-illustration" src="https://www.gstatic.com/youtube/src/web/htdocs/img/monkey.png" alt="Não encontrado">
+            <h1>Oops, página não encontada... <br> <a href="/">Voltar</a></h1>
+        </div>
+    </div>
 {% endblock %}

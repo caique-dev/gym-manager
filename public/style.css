@@ -71,6 +71,27 @@ header {
     color: var(--primary-color);
 }
 
+/* NOT FOUND */
+.centralized {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 97px);
+}
+
+.not_found {
+    text-align: center;
+}
+
+.not_found img {
+    margin-bottom: 32px;
+}
+
+.not_found a {
+    text-decoration: none;
+    color: var(--secundary-color);
+}
+
 /* INSTRUCTORS */
 
 .card {
