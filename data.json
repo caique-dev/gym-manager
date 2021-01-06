@@ -21,6 +21,28 @@
       "blood_type": "A1",
       "weight": "70",
       "height": "180"
+    },
+    {
+      "id": 3,
+      "avatar_url": "https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8YmxhY2slMjBwZW9wbGV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "name": "Elizeu Dias",
+      "email": "elizeu@gmail.com",
+      "birth": 957398400000,
+      "gender": "M",
+      "blood_type": "O1",
+      "weight": "89",
+      "height": "190"
+    },
+    {
+      "id": 4,
+      "avatar_url": "https://images.unsplash.com/photo-1538384690625-e2e7bcf9e402?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTR8fGJsYWNrJTIwcGVvcGxlfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "name": "Rafael Lopes",
+      "email": "rafael@gmail.com",
+      "birth": 936662400000,
+      "gender": "M",
+      "blood_type": "AB1",
+      "weight": "90",
+      "height": "180"
     }
   ],
   "instructors": [
