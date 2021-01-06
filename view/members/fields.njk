@@ -39,6 +39,7 @@
         <div>Tipo sanguíneo</div>
         <div>
             <select name="blood_type">
+                <option value="A1" selected disabled>--</option>
                 <option value="A1" {{ 'selected' if member.blood_type == 'A1'}}>A+</option>
                 <option value="A0" {{ 'selected' if member.blood_type == 'A0'}}>A-</option>
                 <option value="B1" {{ 'selected' if member.blood_type == 'B1'}}>B+</option>

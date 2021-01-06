@@ -36,18 +36,14 @@ exports.post = (req, res) => {
     
     req.body.birth = Date.parse(req.body.birth)
     req.body.created_at = Date.now()
-    req.body.id = Number(data.instructors.length + 1)
 
-    const { id, avatar_url, name, birth, gender, services, created_at } = req.body
+    let id = 1
+    const lastInstructor = data.instructors[data.instructors.length - 1]
+    if (lastInstructor) id = lastInstructor.id + 1
     
     data.instructors.push({
         id,
-        name,
-        gender,
-        birth,
-        services,
-        avatar_url,
-        created_at
+        ...req.body
     })
 
     fs.writeFile('data.json', JSON.stringify(data, null, 2), error => {

@@ -90,7 +90,8 @@ header {
     padding: 32px;
 }
 
-.details.show * {
+.detalhes h3, 
+.details.show div { 
     cursor: default;
 }
 
@@ -98,13 +99,16 @@ header {
     margin: 16px 0;
 }
 
-.details form > label, 
+.details form > label,
+.details > label, 
 .radio_gender {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     display: block;
 }
 
-.details form > label + label, .radio_gender {
+.details form > label,
+.details label,
+.radio_gender {
     margin-top: 16px;
 }
 

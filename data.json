@@ -25,13 +25,40 @@
   ],
   "instructors": [
     {
-      "id": 4,
-      "name": "teste data",
+      "id": 1,
+      "name": "Juliana Block",
       "gender": "F",
-      "birth": 81278035200000,
-      "services": "crossfit, malhação, asdf",
+      "birth": 768009600000,
+      "services": "crossfit, malhação, corrida",
       "avatar_url": "https://images.unsplash.com/photo-1594381898411-846e7d193883?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8Zml0bmVzc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
       "created_at": 1609698547325
+    },
+    {
+      "id": 2,
+      "name": "Leandro Peixeira",
+      "gender": "M",
+      "birth": 729043200000,
+      "services": "crossfit, malhação",
+      "avatar_url": "https://images.unsplash.com/photo-1548932813-88dcf75599c6?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzJ8fGd5bXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "created_at": 1609934362493
+    },
+    {
+      "id": 3,
+      "name": "Tabatha Range",
+      "gender": "F",
+      "birth": 902534400000,
+      "services": "Musculação",
+      "avatar_url": "https://images.unsplash.com/photo-1576511746123-831cb68bc82f?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MzZ8fGd5bXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "created_at": 1609934446493
+    },
+    {
+      "id": 4,
+      "avatar_url": "https://images.unsplash.com/photo-1485727749690-d091e8284ef3?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mzd8fGd5bXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "name": "Emily Costa",
+      "birth": 839376000000,
+      "gender": "F",
+      "services": "Ginástica Artística",
+      "created_at": 1609934828336
     }
   ]
 }
