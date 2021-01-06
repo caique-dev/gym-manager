@@ -23,8 +23,8 @@ Esse projeto foi desenvolvido durante o curso LaunchBase - [RocketSeat](https://
 ### Home:
 
 <div>
-  <img align="left" alt="Home Instructors" width="50%" src="/readme_assets/instructors/home.png">
-  <img align="right" alt="Home Members" width="50%" src="/readme_assets/members/home.png">
+  <img align="left" alt="Home Instructors" width="49%" src="/readme_assets/instructors/home.png">
+  <img align="right" alt="Home Members" width="49%" src="/readme_assets/members/home.png">
 </div>
 
 ## :running: Ideias que ainda vou implementar
