@@ -1,24 +1,32 @@
-<div class="item">
-    <div>Avatar</div>
-    <div><input type="url" name="avatar_url" placeholder="https://" value="{{ member.avatar_url }}"></div>
-</div>
+<label class="first_child">
+    <div class="item">
+        <div>Avatar</div>
+        <div><input type="url" name="avatar_url" placeholder="https://" value="{{ member.avatar_url }}"></div>
+    </div>
+</label>
 
-<div class="item">
-    <div>Nome</div>
-    <div><input type="text" name="name" value="{{ member.name }}"></div>
-</div>
+<label>
+    <div class="item">
+        <div>Nome</div>
+        <div><input type="text" name="name" value="{{ member.name }}"></div>
+    </div>
+</label>
 
-<div class="item">
-    <div>email</div>
-    <div><input type="email" name="email" value="{{ member.email }}"></div>
-</div>
+<label>
+    <div class="item">
+        <div>email</div>
+        <div><input type="email" name="email" value="{{ member.email }}"></div>
+    </div>
+</label>
 
-<div class="item">
-    <div>Data de nascimento</div>
-    <div><input type="date" name="birth" value="{{ member.birth }}"></div>
-</div>
+<label>
+    <div class="item">
+        <div>Data de nascimento</div>
+        <div><input type="date" name="birth" value="{{ member.birth }}"></div>
+    </div>
+</label>
 
-<div class="item">
+<div class="item radio_gender">
     <div>Sexo</div>
     <div>
         <label><span><input type="radio" name="gender" value="F" {{ 'checked' if member.gender == 'F' }}>Feminino</span></label>
@@ -26,34 +34,40 @@
     </div>
 </div>
 
-<div class="item">
-    <div>Tipo sanguíneo</div>
-    <div>
-        <select name="blood_type">
-            <option value="A1" {{ 'selected' if member.blood_type == 'A1'}}>A+</option>
-            <option value="A0" {{ 'selected' if member.blood_type == 'A0'}}>A-</option>
-            <option value="B1" {{ 'selected' if member.blood_type == 'B1'}}>B+</option>
-            <option value="B0" {{ 'selected' if member.blood_type == 'B0'}}>B-</option>
-            <option value="AB1" {{ 'selected' if member.blood_type == 'AB1'}}>AB+</option>
-            <option value="AB0" {{ 'selected' if member.blood_type == 'AB0'}}>AB-</option>
-            <option value="O1" {{ 'selected' if member.blood_type == 'O1'}}>O+</option>
-            <option value="O0" {{ 'selected' if member.blood_type == 'O0'}}>O-</option>
-        </select>
+<label>
+    <div class="item">
+        <div>Tipo sanguíneo</div>
+        <div>
+            <select name="blood_type">
+                <option value="A1" {{ 'selected' if member.blood_type == 'A1'}}>A+</option>
+                <option value="A0" {{ 'selected' if member.blood_type == 'A0'}}>A-</option>
+                <option value="B1" {{ 'selected' if member.blood_type == 'B1'}}>B+</option>
+                <option value="B0" {{ 'selected' if member.blood_type == 'B0'}}>B-</option>
+                <option value="AB1" {{ 'selected' if member.blood_type == 'AB1'}}>AB+</option>
+                <option value="AB0" {{ 'selected' if member.blood_type == 'AB0'}}>AB-</option>
+                <option value="O1" {{ 'selected' if member.blood_type == 'O1'}}>O+</option>
+                <option value="O0" {{ 'selected' if member.blood_type == 'O0'}}>O-</option>
+            </select>
+        </div>
     </div>
-</div>
+</label>
 
-<div class="item">
-    <div>Peso (Kg)</div>
-    <div>
-        <input type="number" name="weight" value="{{ member.weight }}">
+<label>
+    <div class="item">
+        <div>Peso (Kg)</div>
+        <div>
+            <input type="number" name="weight" value="{{ member.weight }}">
+        </div>
     </div>
-</div>
+</label>
 
-<div class="item">
-    <div>Altura (cm)</div>
-    <div>
-        <input type="number" name="height" value="{{ member.height }}">
+<label>
+    <div class="item">
+        <div>Altura (cm)</div>
+        <div>
+            <input type="number" name="height" value="{{ member.height }}">
+        </div>
     </div>
-</div>
+</label>
 
 <button type="submit">Salvar</button>

@@ -90,9 +90,42 @@ header {
     padding: 32px;
 }
 
-.details .item {
+.details.show * {
+    cursor: default;
+}
+
+.first_child {
+    margin: 16px 0;
+}
+
+.details form > label, 
+.radio_gender {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 16px 0;
+    display: block;
+}
+
+.details form > label + label, .radio_gender {
+    margin-top: 16px;
+}
+
+.radio_gender div:first-child {
+    cursor: default;
+}
+
+.details form > label, .radio_gender label {
+    cursor: pointer ;
+}
+
+.details .item {
+    padding: 0 0 16px;
+}
+
+.details.show .item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.details.show .item + .item {
+    margin-bottom: 16px;
 }
 
 .details .item:last-child {
@@ -196,12 +229,12 @@ button[type="submit"],
 
 .table_container th, .table_container td {
     padding: 16px;
-    border-bottom: solid 1px #d9d9d9;
 }
 
-.table_container tr {
+.table_container .instructors_table tr {
     display: grid;
     grid-template-columns: 180px 1fr 86px;
+    border-bottom: solid 1px #d9d9d9;
 }
 
 .table_container tbody tr:last-child {
@@ -214,6 +247,15 @@ button[type="submit"],
     align-items: center;
 }
 
+.table_container tbody tr .services {
+    display: flex;
+    align-items: center;
+}
+
+.table_container tbody tr span {
+    margin: 0;
+}
+
 .table_container tbody tr td:first-child span {
     height: 48px;
     width: 48px;
@@ -224,7 +266,7 @@ button[type="submit"],
     box-shadow: -3px 2px 5px 0px rgba(0, 0, 0, 0.5); 
 }
 
-.table_container tbody tr td:last-child {
+.table_container .instructors_table tbody tr td:last-child {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -249,4 +291,8 @@ button[type="submit"],
 .table_container > a {
     display: inline-block;
     margin: 0  0 16px auto;
+}
+
+.table_container .members_table tbody td:first-child {
+    max-width: 220px;
 }

@@ -1,5 +1,28 @@
 {
-  "members": [],
+  "members": [
+    {
+      "id": 1,
+      "avatar_url": "https://images.unsplash.com/photo-1529123202249-4f6224196c9b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8YmxhY2slMjBwZW9wbGV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "name": "Paula Silva",
+      "email": "paula@gmail.com",
+      "birth": 768441600000,
+      "gender": "F",
+      "blood_type": "A1",
+      "weight": "75",
+      "height": "160"
+    },
+    {
+      "id": 2,
+      "avatar_url": "https://images.unsplash.com/photo-1533674639815-52f8aea1b132?ixid=MXwxMjA3fDB8MHxzZWFyY2h8N3x8YmxhY2slMjBwZW9wbGV8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+      "name": "Luana Silva",
+      "email": "luana@gmail.com",
+      "birth": 842918400000,
+      "gender": "F",
+      "blood_type": "A1",
+      "weight": "70",
+      "height": "180"
+    }
+  ],
   "instructors": [
     {
       "id": 4,

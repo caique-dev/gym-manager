@@ -32,13 +32,16 @@ exports.post = (req, res) => {
     for (let key of keys) {
         if (req.body[key] == "") return res.send(`O campo "${key}" está vazio. Por favor, preencha todos os campos.`)
     }
+
+    console.log('req.body: ', req.body)
     
     let birth = Date.parse(req.body.birth)
 
     let id = 1
     const lastMember = data.members[data.members.length - 1]
+    console.log('lastMember: ', lastMember)
     
-    if (lastMember) ìd = lastMember.id + 1
+    if (lastMember) id = lastMember.id + 1
     
     data.members.push({
         id,
