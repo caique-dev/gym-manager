@@ -11,7 +11,7 @@
 * <a href="#rocket-sobre-a-aplica%C3%A7%C3%A3o">Sobre a aplicação</a>
 * <a href="#robot-tecnologias-utilizadas">Tecnologias</a>
 * <a href="#zap-como-executar-essa-aplica%C3%A7%C3%A3o-em-sua-m%C3%A1quina">Como executar em sua máquina</a>
-* <a href="#eyes-preview">Preview</a>
+* <a href="https://github.com/caique-dev/gym-manager#eyes-preview">Preview</a>
 * <a href="#memo-licença">Licença</a>
 * <a href="#telephone_receiver-contatos">Contatos</a>
 
@@ -66,7 +66,9 @@ Feito isso, abra o seu navegador e acesse `http://localhost:5000/`
 
 *Como a aplicação ainda está sendo desenvolvida, você deve acessar pela porta **3000**.*
 
-## :eyes: Preview *Clique para ver individualmente*
+## :eyes: Preview
+
+> *Clique para ver individualmente*
 
 ### Home:
 
