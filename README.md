@@ -26,10 +26,21 @@ Esse projeto foi desenvolvido durante o curso LaunchBase - [RocketSeat](https://
 <div>
 
   *Instrutores*
-  <img style="border: solid 1px #000" alt="Home Instructors" src="/readme_assets/instructors/home.png">
+  <img alt="Home Instructors" src="/readme_assets/instructors/home.png">
   
   *Membros*
   <img alt="Home Members" src="/readme_assets/members/home.png">
+</div>
+
+### Página de Cadastro:
+
+<div>
+
+  *Instrutores*
+  <img alt="Cadastro Instructors" src="/readme_assets/instructors/cadastro.png">
+  
+  *Membros*
+  <img alt="Cadastro Members" src="/readme_assets/members/cadastro.png">
 </div>
 
 ### Página de Exibição:
@@ -41,6 +52,17 @@ Esse projeto foi desenvolvido durante o curso LaunchBase - [RocketSeat](https://
   
   *Membros*
   <img alt="Exibição Members" src="/readme_assets/members/exibicao.png">
+</div>
+
+### Página de Edição:
+
+<div>
+
+  *Instrutores*
+  <img alt="Edição Instructors" src="/readme_assets/instructors/edicao.png">
+  
+  *Membros*
+  <img alt="Edição Members" src="/readme_assets/members/edicao.png">
 </div>
 
 ## :bulb: Ideias que ainda vou implementar
