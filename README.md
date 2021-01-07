@@ -21,10 +21,10 @@ Esse projeto foi desenvolvido durante o curso LaunchBase - [RocketSeat](https://
 
 ## :bulb: Ideias que ainda vou implementar
 
-* Responsividade - Nos dias de hoje os celulares são muito utilizados para acessar a internet, por isso a reponsividade é indispensável;
-* Aprimoramento dos formulários de cadastro - Melhorar a experiência do usuário na página de cadastro, através do aprimoramento do formulário;
-* Estratificar todas as folhas de estilo - Organizar melhor o estilo da aplicação, separando todas as folhas de estilo por página ou seção;
-* Melhoria na comunicação - Melhorar a comunição entre instrutores e alunos cadastrados, através de um chat na própria plataforma ou outras soluções.
+- [] Responsividade - Nos dias de hoje os celulares são muito utilizados para acessar a internet, por isso a reponsividade é indispensável;
+- [] Aprimoramento dos formulários de cadastro - Melhorar a experiência do usuário na página de cadastro, através do aprimoramento do formulário;
+- [] Estratificar todas as folhas de estilo - Organizar melhor o estilo da aplicação, separando todas as folhas de estilo por página ou seção;
+- [] Melhoria na comunicação - Melhorar a comunição entre instrutores e alunos cadastrados, através de um chat na própria plataforma ou outras soluções.
 
 ## :robot: Tecnologias utilizadas
 
