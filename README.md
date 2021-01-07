@@ -2,68 +2,22 @@
     Gym Manager
 </h1>
 
-<h2 align="center">
+<p align="center">
     <img alt="Launchbase" src="https://storage.googleapis.com/golden-wind/bootcamp-launchbase/logo.png" width="250px" />
-</h2>
+</p>
 
 ## :notebook: Sumário
 
 * <a href="#rocket-sobre-a-aplica%C3%A7%C3%A3o">Sobre a aplicação</a>
 * <a href="#robot-tecnologias-utilizadas">Tecnologias</a>
 * <a href="#zap-como-executar-essa-aplica%C3%A7%C3%A3o-em-sua-m%C3%A1quina">Como executar em sua máquina</a>
+* <a href="#eyes-preview">Preview</a>
 * <a href="#memo-licença">Licença</a>
 * <a href="#telephone_receiver-contatos">Contatos</a>
 
 ## :rocket: Sobre a aplicação
 
 Esse projeto foi desenvolvido durante o curso LaunchBase - [RocketSeat](https://rocketseat.com.br/). A aplicação **Gym Manager** visa conectar Personal Trainers e alunos apaixonados pelo mundo fitness. Nessa etapa do curso estamos aprendendo a criar um servidor HTTP com *Express* e também tudo que é necessário para gerenciá-lo, como criação das rotas, persistência dos dados e configuração de um tamplate engine, no caso, o *Nunjucks*. As partes mais importantes do projeto já estão prontas, como o cadastro, edição e listagem dos perfis, mas ainda quero adicionar mais funcionalidades. **Quase finalizado**.
-
-## Preview
-*Clique para ver individualmente*
-
-### Home:
-
-<div>
-
-  *Instrutores*
-  <img alt="Home Instructors" src="/readme_assets/instructors/home.png">
-  
-  *Membros*
-  <img alt="Home Members" src="/readme_assets/members/home.png">
-</div>
-
-### Página de Cadastro:
-
-<div>
-
-  *Instrutores*
-  <img alt="Cadastro Instructors" src="/readme_assets/instructors/cadastro.png">
-  
-  *Membros*
-  <img alt="Cadastro Members" src="/readme_assets/members/cadastro.png">
-</div>
-
-### Página de Exibição:
-
-<div>
-
-  *Instrutores*
-  <img alt="Exibição Instructors" src="/readme_assets/instructors/exibicao.png">
-  
-  *Membros*
-  <img alt="Exibição Members" src="/readme_assets/members/exibicao.png">
-</div>
-
-### Página de Edição:
-
-<div>
-
-  *Instrutores*
-  <img alt="Edição Instructors" src="/readme_assets/instructors/edicao.png">
-  
-  *Membros*
-  <img alt="Edição Members" src="/readme_assets/members/edicao.png">
-</div>
 
 ## :bulb: Ideias que ainda vou implementar
 
@@ -111,6 +65,55 @@ Para desligar o servidor, tecle "ctrl + c" no terminal
 Feito isso, abra o seu navegador e acesse `http://localhost:5000/`
 
 *Como a aplicação ainda está sendo desenvolvida, você deve acessar pela porta **3000**.*
+
+## :eyes: Preview *Clique para ver individualmente*
+
+### Home:
+
+<div>
+
+  *Instrutores*
+  <img alt="Home Instructors" src="/readme_assets/instructors/home.png">
+  
+  *Membros*
+  <img alt="Home Members" src="/readme_assets/members/home.png">
+</div>
+---
+
+### Página de Cadastro:
+
+<div>
+
+  *Instrutores*
+  <img alt="Cadastro Instructors" src="/readme_assets/instructors/cadastro.png">
+  
+  *Membros*
+  <img alt="Cadastro Members" src="/readme_assets/members/cadastro.png">
+</div>
+---
+
+### Página de Exibição:
+
+<div>
+
+  *Instrutores*
+  <img alt="Exibição Instructors" src="/readme_assets/instructors/exibicao.png">
+  
+  *Membros*
+  <img alt="Exibição Members" src="/readme_assets/members/exibicao.png">
+</div>
+---
+
+### Página de Edição:
+
+<div>
+
+  *Instrutores*
+  <img alt="Edição Instructors" src="/readme_assets/instructors/edicao.png">
+  
+  *Membros*
+  <img alt="Edição Members" src="/readme_assets/members/edicao.png">
+</div>
 
 ## :memo: Licença
 
