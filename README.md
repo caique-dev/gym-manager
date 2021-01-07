@@ -6,13 +6,14 @@
     <img alt="Launchbase" src="https://storage.googleapis.com/golden-wind/bootcamp-launchbase/logo.png" width="250px" />
 </h2>
 
-<p align="center">
-  <a href="#rocket-sobre-a-aplica%C3%A7%C3%A3o">Sobre a aplicação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#robot-tecnologias-utilizadas">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#zap-como-executar-essa-aplica%C3%A7%C3%A3o-em-sua-m%C3%A1quina">Como executar em sua máquina</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-licença">Licença</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#telephone_receiver-contatos">Contatos</a>
-</p>
+## Sumário
+<ul>
+  * <a href="#rocket-sobre-a-aplica%C3%A7%C3%A3o">Sobre a aplicação</a>
+  * <a href="#robot-tecnologias-utilizadas">Tecnologias</a>
+  * <a href="#zap-como-executar-essa-aplica%C3%A7%C3%A3o-em-sua-m%C3%A1quina">Como executar em sua máquina</a>
+  * <a href="#memo-licença">Licença</a>
+  * <a href="#telephone_receiver-contatos">Contatos</a>
+</ul>
 
 ## :rocket: Sobre a aplicação
 
@@ -24,12 +25,21 @@ Esse projeto foi desenvolvido durante o curso LaunchBase - [RocketSeat](https://
 ### Home:
 
 <div>
-
   *Instrutores*
   <img alt="Home Instructors" src="/readme_assets/instructors/home.png">
   
   *Membros*
   <img alt="Home Members" src="/readme_assets/members/home.png">
+</div>
+
+### Página de Exibição:
+
+<div>
+  *Instrutores*
+  <img alt="Exibição Instructors" src="/readme_assets/instructors/exibicao.png">
+  
+  *Membros*
+  <img alt="Exibição Members" src="/readme_assets/members/exibicao.png">
 </div>
 
 ## :running: Ideias que ainda vou implementar
