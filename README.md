@@ -80,6 +80,7 @@ Feito isso, abra o seu navegador e acesse `http://localhost:5000/`
   *Membros*
   <img alt="Home Members" src="/readme_assets/members/home.png">
 </div>
+
 ---
 
 ### Página de Cadastro:
@@ -92,6 +93,7 @@ Feito isso, abra o seu navegador e acesse `http://localhost:5000/`
   *Membros*
   <img alt="Cadastro Members" src="/readme_assets/members/cadastro.png">
 </div>
+
 ---
 
 ### Página de Exibição:
@@ -104,6 +106,7 @@ Feito isso, abra o seu navegador e acesse `http://localhost:5000/`
   *Membros*
   <img alt="Exibição Members" src="/readme_assets/members/exibicao.png">
 </div>
+
 ---
 
 ### Página de Edição:
