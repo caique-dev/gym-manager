@@ -7,13 +7,12 @@
 </h2>
 
 ## :notebook: Sumário
-<ul>
+
 * <a href="#rocket-sobre-a-aplica%C3%A7%C3%A3o">Sobre a aplicação</a>
 * <a href="#robot-tecnologias-utilizadas">Tecnologias</a>
 * <a href="#zap-como-executar-essa-aplica%C3%A7%C3%A3o-em-sua-m%C3%A1quina">Como executar em sua máquina</a>
 * <a href="#memo-licença">Licença</a>
 * <a href="#telephone_receiver-contatos">Contatos</a>
-</ul>
 
 ## :rocket: Sobre a aplicação
 
@@ -27,7 +26,7 @@ Esse projeto foi desenvolvido durante o curso LaunchBase - [RocketSeat](https://
 <div>
 
   *Instrutores*
-  <img alt="Home Instructors" src="/readme_assets/instructors/home.png">
+  <img style="border: solid 1px #000" alt="Home Instructors" src="/readme_assets/instructors/home.png">
   
   *Membros*
   <img alt="Home Members" src="/readme_assets/members/home.png">
