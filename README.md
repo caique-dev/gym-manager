@@ -6,13 +6,13 @@
     <img alt="Launchbase" src="https://storage.googleapis.com/golden-wind/bootcamp-launchbase/logo.png" width="250px" />
 </h2>
 
-## Sumário
+## :notebook: Sumário
 <ul>
-  * <a href="#rocket-sobre-a-aplica%C3%A7%C3%A3o">Sobre a aplicação</a>
-  * <a href="#robot-tecnologias-utilizadas">Tecnologias</a>
-  * <a href="#zap-como-executar-essa-aplica%C3%A7%C3%A3o-em-sua-m%C3%A1quina">Como executar em sua máquina</a>
-  * <a href="#memo-licença">Licença</a>
-  * <a href="#telephone_receiver-contatos">Contatos</a>
+* <a href="#rocket-sobre-a-aplica%C3%A7%C3%A3o">Sobre a aplicação</a>
+* <a href="#robot-tecnologias-utilizadas">Tecnologias</a>
+* <a href="#zap-como-executar-essa-aplica%C3%A7%C3%A3o-em-sua-m%C3%A1quina">Como executar em sua máquina</a>
+* <a href="#memo-licença">Licença</a>
+* <a href="#telephone_receiver-contatos">Contatos</a>
 </ul>
 
 ## :rocket: Sobre a aplicação
@@ -25,6 +25,7 @@ Esse projeto foi desenvolvido durante o curso LaunchBase - [RocketSeat](https://
 ### Home:
 
 <div>
+
   *Instrutores*
   <img alt="Home Instructors" src="/readme_assets/instructors/home.png">
   
@@ -35,6 +36,7 @@ Esse projeto foi desenvolvido durante o curso LaunchBase - [RocketSeat](https://
 ### Página de Exibição:
 
 <div>
+
   *Instrutores*
   <img alt="Exibição Instructors" src="/readme_assets/instructors/exibicao.png">
   
@@ -42,7 +44,7 @@ Esse projeto foi desenvolvido durante o curso LaunchBase - [RocketSeat](https://
   <img alt="Exibição Members" src="/readme_assets/members/exibicao.png">
 </div>
 
-## :running: Ideias que ainda vou implementar
+## :bulb: Ideias que ainda vou implementar
 
 * Responsividade - Nos dias de hoje os celulares são muito utilizados para acessar a internet, por isso a reponsividade é indispensável;
 * Aprimoramento dos formulários de cadastro - Melhorar a experiência do usuário na página de cadastro, através do aprimoramento do formulário;
