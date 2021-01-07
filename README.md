@@ -64,7 +64,7 @@ Para desligar o servidor, tecle "ctrl + c" no terminal
 
 Feito isso, abra o seu navegador e acesse `http://localhost:5000/`
 
-*Como a aplicação ainda está sendo desenvolvida, você deve acessar pela porta **3000**.*
+> Caso queira iniciar a aplicação usando as ferramentas de desenvolvimento, como o *Nodemon* e o *Browser Sync*, você deve teclar ```javascript npm run dev ``` no terminal.
 
 ## :eyes: Preview
 
