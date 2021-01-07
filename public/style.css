@@ -243,6 +243,11 @@ button[type="submit"],
 .table_container table {
     width: 100%;
     border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.table_container table tr {
+    border-bottom: solid 1px #d9d9d9;
 }
 
 .table_container thead tr th {
@@ -259,7 +264,6 @@ button[type="submit"],
 .table_container .instructors_table tr {
     display: grid;
     grid-template-columns: 180px 1fr 86px;
-    border-bottom: solid 1px #d9d9d9;
 }
 
 .table_container tbody tr:last-child {
@@ -321,3 +325,8 @@ button[type="submit"],
 .table_container .members_table tbody td:first-child {
     max-width: 220px;
 }
+
+/* Remover notificação do Browser Sync
+body div#__bs_notify__ {
+    display: none !important;
+} */
