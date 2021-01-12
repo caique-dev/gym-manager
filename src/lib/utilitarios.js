@@ -19,7 +19,7 @@ module.exports = {
         const year = date.getUTCFullYear()
 
         return {
-            desde: `${day}/${month}/${year}`,
+            format: `${day}/${month}/${year}`,
             ISO: `${year}-${month}-${day}`,
             birth: `${day}/${month}`
         }

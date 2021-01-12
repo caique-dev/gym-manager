@@ -1,24 +1,20 @@
+const instructor = require('../models/instructors')
 const { age, date } = require('../../lib/utilitarios')
-const db = require('../../config/db')
 
 module.exports = {
+    list(req, res) {
+
+        instructor.all( instructors => {
+            for (instructor_item of instructors) {
+                instructor_item.services = instructor_item.services.split(',')
+            }
+
+            return res.render(`instructors/index`, { instructors })
+        })
+    },
     create(req, res) {
         const instructor = { gender: 'F'}
         return res.render('instructors/create.njk', { instructor })
-    },
-    list(req, res) {
-        const instructors = []
-
-        for (let index = 0; index < data.instructors.length; index++) {
-            if (data.instructors[index].services) {
-                instructors[index] = {
-                    ...data.instructors[index],
-                    services: data.instructors[index].services.split(',')
-                }
-            }
-        }
-
-        return res.render('instructors/index', { instructors })
     },
     post(req, res) {
         const keys = Object.keys(req.body)
@@ -27,37 +23,20 @@ module.exports = {
             if (req.body[key] == "") return res.send(`O campo "${key}" está vazio. Por favor, preencha todos os campos.`)
         }
 
-        const query = `
-            INSERT INTO instructors (
-                name,
-                avatar_url,
-                gender,
-                services,
-                birth,
-                created_at
-            ) VALUES ( $1, $2, $3, $4, $5, $6 )
-            RETURNING id, name
-        `
-        
-        const values = [
-            req.body.name,
-            req.body.avatar_url,
-            req.body.gender,
-            req.body.services,
-            date(req.body.birth).ISO,
-            date(Date.now()).ISO
-        ]
-
-        db.query(query, values, (error, results) => {
-            if (error) return res.send('DATABASE error!')
-
-            return res.redirect(`/instructors/${ results.rows[0].id }`)
+        instructor.create(req.body, instructor => {
+            return res.redirect(`/instructors/${ instructor.id }`)
         })
     },
     show(req, res) {
-        const { id } = req.params
+        instructor.find(req.params.id, instructor => {
+            if (!instructor) return res.send("Instrutor não encontrado!")
 
-        return res.render('instructors/show')
+            instructor.age = age(instructor.birth)
+            instructor.services = instructor.services.split(',')
+            instructor.created_at = date(instructor.created_at).format
+
+            return res.render('instructors/show', { instructor })
+        })
     },
     edit(req, res) {
         const { id } = req.params
