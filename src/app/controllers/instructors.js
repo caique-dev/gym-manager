@@ -3,7 +3,6 @@ const { age, date } = require('../../lib/utilitarios')
 
 module.exports = {
     list(req, res) {
-
         instructor.all( instructors => {
             for (instructor_item of instructors) {
                 instructor_item.services = instructor_item.services.split(',')
@@ -39,18 +38,13 @@ module.exports = {
         })
     },
     edit(req, res) {
-        const { id } = req.params
+        instructor.find(req.params.id, instructor => {
+            if (!instructor) return res.send("Instrutor não encontrado!")
 
-        const foundInstructor = data.instructors.find(instructor.id == id)
+            instructor.birth = date(instructor.birth).ISO
 
-        if (!foundInstructor) return res.send('Instrutor não encontrado')
-
-        const instructor = {
-            ...foundInstructor,
-            birth: date(foundInstructor.birth).ISO
-        }
-
-        return res.render('instructors/edit', { instructor })
+            return res.render('instructors/edit', { instructor })
+        })
     },
     put(req, res) {
         const  { id } = req.body
@@ -63,7 +57,9 @@ module.exports = {
             }
         })
 
-        if (!foundInstructor) return res.send('Instrutor(a) não encontrado!')   
+        if (!foundInstructor) return res.send('Instrutor(a) não encontrado!')
+
+        instructor.update(req.body, () => res.redirect(`/instructors/${ req.body.id }`))
     },
     delete(req, res) {
         const { id } = req.body
