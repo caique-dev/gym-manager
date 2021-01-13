@@ -47,31 +47,17 @@ module.exports = {
         })
     },
     put(req, res) {
-        const  { id } = req.body
-        let index 
+        const keys = Object.keys(req.body)
 
-        const foundInstructor = data.instructors.find( ( instructor, foundIndex ) => {
-            if (instructor.id == id) {
-                index = foundIndex
-                return true
-            }
-        })
-
-        if (!foundInstructor) return res.send('Instrutor(a) não encontrado!')
+        for (let key of keys) {
+            if (req.body[key] == "") return res.send(`O campo "${key}" está vazio. Por favor, preencha todos os campos.`)
+        }
 
         instructor.update(req.body, () => res.redirect(`/instructors/${ req.body.id }`))
     },
     delete(req, res) {
-        const { id } = req.body
-
-        const filteredInstructors = data.instructors.filter( instructor.id != id )
-
-        data.instructors = filteredInstructors
-
-        fs.writeFile('data.json', JSON.stringify(data, null, 2), (error) => {
-            if (error) return res.send('Erro na gravação do arquivo')
-
-            return res.redirect('/')
+        instructor.delete(req.body.id, () => {
+            res.redirect('/instructors')
         })
     }
 }

@@ -4,7 +4,7 @@ const { date } = require('../../lib/utilitarios')
 module.exports = {
     all(callback) {
         db.query('SELECT * FROM instructors', (error, results) => {
-            if (error) return res.send('DATABASE error!')
+            if (error) throw `DATABASE erro! ${ error }`
 
             callback(results.rows)
         })
@@ -19,7 +19,7 @@ module.exports = {
                 birth,
                 created_at
             ) VALUES ( $1, $2, $3, $4, $5, $6 )
-            RETURNING id, name
+            RETURNING id
         `
         
         const values = [
@@ -32,7 +32,7 @@ module.exports = {
         ]
 
         db.query(query, values, (error, results) => {
-            if (error) return res.send('DATABASE error!')
+            if (error) throw `DATABASE erro! ${ error }`
 
             callback(results.rows[0])
         })
@@ -41,7 +41,7 @@ module.exports = {
         db.query(`SELECT * 
             FROM instructors 
             WHERE id = $1`, [id], (error, results) => {
-                if (error) return res.send('DATABASE error!')
+                if (error) throw `DATABASE erro! ${ error }`
 
                 callback(results.rows[0])
         })
@@ -67,10 +67,17 @@ module.exports = {
         ]
 
         db.query(query, values, (error, results) => {
-            if (error) return res.send('DATABASE error!')
+            if (error) throw `DATABASE erro! ${ error }`
             
             callback()
         })
 
+    },
+    delete(id, callback) {
+        db.query(`DELETE FROM instructors WHERE id = $1`, [id], (error, results) => {
+            if (error) throw `DATABASE error! ${ error }`
+
+            callback()
+        })
     }
 }

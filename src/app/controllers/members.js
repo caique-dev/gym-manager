@@ -1,23 +1,19 @@
+const member = require('../models/members')
 const { age, date } = require('../../lib/utilitarios')
 
 module.exports = {
+    list(req, res) {
+        member.all( members => {
+            for (member_item of members) {
+                member_item.services = member_item.services.split(',')
+            }
+
+            return res.render(`members/index`, { members })
+        })
+    },
     create(req, res) {
         const member = { gender: 'F'}
         return res.render('members/create.njk', { member })
-    },
-    list(req, res) {
-        const members = []
-
-        for (let index = 0; index < data.members.length; index++) {
-            if (data.members[index].services) {
-                members[index] = {
-                    ...data.members[index],
-                    services: data.members[index].services.split(',')
-                }
-            }
-        }
-
-        return res.render('members/index',)
     },
     post(req, res) {
         const keys = Object.keys(req.body)
@@ -25,63 +21,43 @@ module.exports = {
         for (let key of keys) {
             if (req.body[key] == "") return res.send(`O campo "${key}" está vazio. Por favor, preencha todos os campos.`)
         }
-        
-        return res.send('refatorando')
+
+        member.create(req.body, member => {
+            return res.redirect(`/members/${ member.id }`)
+        })
     },
     show(req, res) {
-        const { id } = req.params
+        member.find(req.params.id, member => {
+            if (!member) return res.send("Instrutor não encontrado!")
 
-        const foundMember = data.members.find(member.id == id)
+            member.age = age(member.birth)
+            member.services = member.services.split(',')
+            member.created_at = date(member.created_at).format
 
-        if (!foundMember) return res.send('Instrutor não encontrado')
-
-        const member = {
-            ...foundMember,
-            age: age(foundMember.birth),
-            services: foundMember.services.split(','),
-            created_at: date(foundMember.created_at).desde
-        }
-
-        return res.render('members/show', { member })
+            return res.render('members/show', { member })
+        })
     },
     edit(req, res) {
-        const { id } = req.params
+        member.find(req.params.id, member => {
+            if (!member) return res.send("Instrutor não encontrado!")
 
-        const foundMember = data.members.find(member.id == id)
+            member.birth = date(member.birth).ISO
 
-        if (!foundMember) return res.send('Instrutor não encontrado')
-
-        const member = {
-            ...foundMember,
-            birth: date(foundMember.birth).ISO
-        }
-
-        return res.render('members/edit', { member })
+            return res.render('members/edit', { member })
+        })
     },
     put(req, res) {
-        const  { id } = req.body
-        let index 
+        const keys = Object.keys(req.body)
 
-        const foundMember = data.members.find( ( member, foundIndex ) => {
-            if (member.id == id) {
-                index = foundIndex
-                return true
-            }
-        })
+        for (let key of keys) {
+            if (req.body[key] == "") return res.send(`O campo "${key}" está vazio. Por favor, preencha todos os campos.`)
+        }
 
-        if (!foundMember) return res.send('Instrutor(a) não encontrado!')   
+        member.update(req.body, () => res.redirect(`/members/${ req.body.id }`))
     },
     delete(req, res) {
-        const { id } = req.body
-
-        const filteredMembers = data.members.filter( member.id != id )
-
-        data.members = filteredMembers
-
-        fs.writeFile('data.json', JSON.stringify(data, null, 2), (error) => {
-            if (error) return res.send('Erro na gravação do arquivo')
-
-            return res.redirect('/')
+        member.delete(req.body.id, () => {
+            res.redirect('/members')
         })
     }
 }
