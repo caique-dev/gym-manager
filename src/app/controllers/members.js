@@ -1,13 +1,9 @@
 const member = require('../models/members')
-const { age, date } = require('../../lib/utilitarios')
+const { age, blood_type, date } = require('../../lib/utilitarios')
 
 module.exports = {
     list(req, res) {
         member.all( members => {
-            for (member_item of members) {
-                member_item.services = member_item.services.split(',')
-            }
-
             return res.render(`members/index`, { members })
         })
     },
@@ -31,8 +27,10 @@ module.exports = {
             if (!member) return res.send("Instrutor não encontrado!")
 
             member.age = age(member.birth)
-            member.services = member.services.split(',')
-            member.created_at = date(member.created_at).format
+            member.birth = date(member.birth).birth
+            member.blood_type = blood_type(member.blood_type)
+
+            console.log(member)
 
             return res.render('members/show', { member })
         })
