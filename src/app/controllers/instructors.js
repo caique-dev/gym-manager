@@ -4,26 +4,47 @@ const instructors = require('../models/instructors')
 
 module.exports = {
     list(req, res) {
-        const { filter } = req.query
+        let { filter, page, limit } = req.query
 
-        if (filter) {
-            instructors.findBy(filter, instructors => {
+        page = page || 1
+        limit = limit || 2
+        let offset = limit * (page - 1)
 
-                instructors.forEach( instructor => {
+        const params = {
+            filter,
+            limit,
+            offset,
+            callback(foundInstructor) {
+                foundInstructor.forEach( instructor => {
                     instructor.services = instructor.services.split(',')
                 })
 
-                res.render('instructors/index', { instructors, filter })
-            })
-        } else {
-           instructor.all( instructors => {
-                for (instructor_item of instructors) {
-                    instructor_item.services = instructor_item.services.split(',')
-                }
-    
-                return res.render(`instructors/index`, { instructors })
-            })  
+                console.log(foundInstructor)
+
+                res.render('instructors/index', { instructors: foundInstructor, filter })
+            }
         }
+
+        instructors.paginate(params)
+
+        // if (filter) {
+        //     instructors.findBy(filter, instructors => {
+
+        //         instructors.forEach( instructor => {
+        //             instructor.services = instructor.services.split(',')
+        //         })
+
+        //         res.render('instructors/index', { instructors, filter })
+        //     })
+        // } else {
+        //    instructor.all( instructors => {
+        //         for (instructor_item of instructors) {
+        //             instructor_item.services = instructor_item.services.split(',')
+        //         }
+    
+        //         return res.render(`instructors/index`, { instructors })
+        //     })  
+        // }
 
     },
     create(req, res) {

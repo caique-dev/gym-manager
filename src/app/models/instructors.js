@@ -1,3 +1,4 @@
+const { query } = require('../../config/db')
 const db = require('../../config/db')
 const { date } = require('../../lib/utilitarios')
 
@@ -98,6 +99,35 @@ module.exports = {
             if (error) throw `DATABASE error! ${ error }`
 
             callback()
+        })
+    },
+    paginate(params) {
+        const { filter, limit, offset, callback } = params
+
+        let query = `
+            SELECT instructors.*, COUNT(members.id_instructor) AS total_students 
+            FROM instructors
+            LEFT JOIN members ON instructors.id = members.id_instructor
+        `
+
+        if (filter) {
+            query = `${query} 
+                WHERE instructor.name ILIKE '%${ filter }%'
+                OR instructor.services ILIKE '%${ filter }%'
+            `
+        }
+
+        query = `${ query }
+            GROUP BY instructors.id
+            LIMIT $1 OFFSET $2
+        `
+
+        db.query(query, [limit, offset], (error, results) => {
+            if (error) throw `DATABASE error! ${ error }`
+
+            // console.log(results.rows)
+
+            callback(results.rows)
         })
     }
 }
