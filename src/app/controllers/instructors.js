@@ -1,15 +1,30 @@
 const instructor = require('../models/instructors')
 const { age, date } = require('../../lib/utilitarios')
+const instructors = require('../models/instructors')
 
 module.exports = {
     list(req, res) {
-        instructor.all( instructors => {
-            for (instructor_item of instructors) {
-                instructor_item.services = instructor_item.services.split(',')
-            }
+        const { filter } = req.query
 
-            return res.render(`instructors/index`, { instructors })
-        })
+        if (filter) {
+            instructors.findBy(filter, instructors => {
+
+                instructors.forEach( instructor => {
+                    instructor.services = instructor.services.split(',')
+                })
+
+                res.render('instructors/index', { instructors, filter })
+            })
+        } else {
+           instructor.all( instructors => {
+                for (instructor_item of instructors) {
+                    instructor_item.services = instructor_item.services.split(',')
+                }
+    
+                return res.render(`instructors/index`, { instructors })
+            })  
+        }
+
     },
     create(req, res) {
         const instructor = { gender: 'F'}

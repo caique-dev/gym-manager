@@ -211,7 +211,8 @@ input::placeholder {
 }
 
 button[type="submit"],
-.edit_button {
+.edit_button,
+.simple_button {
     padding: 8px 32px;
     background-color: var(--primary-color);
     color: #fff;
@@ -222,7 +223,8 @@ button[type="submit"],
     cursor: pointer;
 }
 
-.edit_button {
+.edit_button,
+.simple_button {
     display: block;
     text-align: center;   
     text-decoration: none;
@@ -325,6 +327,42 @@ button[type="submit"],
 
 .table_container .members_table tbody td:first-child {
     max-width: 220px;
+}
+
+/* FILTRO */
+
+header.filter {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 0 32px 0;
+}
+
+header.filter a {
+    margin: 0;
+    max-width:  120px;
+}
+
+header.filter form {
+    display: grid;
+    grid-template-columns: 1fr 120px;
+    align-items: center;
+    grid-gap: 8px;
+}
+
+header.filter form * {
+    height: 100%;
+}
+ 
+header.filter form input {
+    padding: 4px 8px;
+    border: solid 1px #eee;
+    border-radius: 4px;
+}
+
+header.filter form button {
+    margin: 0;
+    height: 41px;
 }
 
 /* Remover notificação do Browser Sync

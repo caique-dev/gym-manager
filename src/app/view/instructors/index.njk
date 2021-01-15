@@ -4,12 +4,12 @@
     <section class="card table_container">
 
         <header class="filter">
-        <a href="/instructors/create">Novo</a>
+            <a class="simple_button" href="/instructors/create">Novo</a>
 
-        <form action="/instructors" method="get">
-            <input type="text" name="filter" placeholder="Filtrar por nome">
-            <button type="submit">Filtrar</button>
-        </form>
+            <form action="/instructors" method="get">
+                <input type="text" name="filter" placeholder="Filtrar por nome" value="{{ filter }}">
+                <button type="submit">Filtrar</button>
+            </form>
         </header>
 
         <table class="instructors_table">
