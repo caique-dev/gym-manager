@@ -8,8 +8,10 @@ module.exports = {
         })
     },
     create(req, res) {
-        const member = { gender: 'F'}
-        return res.render('members/create.njk', { member })
+        member.instructorsOptions( instructorsOptions => {
+            const member = { create: true, gender: 'F' }
+            return res.render('members/create', { member, options: instructorsOptions })
+        })
     },
     post(req, res) {
         const keys = Object.keys(req.body)
@@ -30,18 +32,22 @@ module.exports = {
             member.birth = date(member.birth).birth
             member.blood_type = blood_type(member.blood_type)
 
-            console.log(member)
+            // console.log(member)
 
             return res.render('members/show', { member })
         })
     },
     edit(req, res) {
-        member.find(req.params.id, member => {
-            if (!member) return res.send("Instrutor não encontrado!")
+        member.find(req.params.id, foundMember => {
+            if (!foundMember) return res.send("Instrutor não encontrado!")
 
-            member.birth = date(member.birth).ISO
+            foundMember.birth = date(foundMember.birth).ISO
 
-            return res.render('members/edit', { member })
+            // console.log(member)
+
+            member.instructorsOptions( instructorsOptions => {
+                return res.render('members/edit', { member: foundMember, options: instructorsOptions })
+            })
         })
     },
     put(req, res) {

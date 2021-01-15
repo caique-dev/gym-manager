@@ -13,7 +13,7 @@ module.exports = {
     },
     create(req, res) {
         const instructor = { gender: 'F'}
-        return res.render('instructors/create.njk', { instructor })
+        return res.render('instructors/create', { instructor })
     },
     post(req, res) {
         const keys = Object.keys(req.body)

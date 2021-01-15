@@ -23,8 +23,9 @@ module.exports = {
                 birth,
                 blood_type,
                 height,
-                weight
-            ) VALUES ( $1, $2, $3, $4, $5, $6, $7, $8 )
+                weight,
+                id_instructor
+            ) VALUES ( $1, $2, $3, $4, $5, $6, $7, $8, $9 )
             RETURNING id
         `
         
@@ -37,6 +38,7 @@ module.exports = {
             data.blood_type,
             data.height,
             data.weight,
+            data.instructor,
         ]
 
         db.query(query, values, (error, results) => {
@@ -46,10 +48,15 @@ module.exports = {
         })
     },
     find(id, callback) {
-        db.query(`SELECT * 
-            FROM members 
-            WHERE id = $1`, [id], (error, results) => {
+        db.query(`
+            SELECT members.*, instructors.name AS instructor_name 
+            FROM members
+            LEFT JOIN instructors ON (members.id_instructor = instructors.id) 
+            WHERE members.id = $1
+        `, [id], (error, results) => {
                 if (error) throw `DATABASE erro! ${ error }`
+
+                // console.log(results.rows[0])
 
                 callback(results.rows[0])
         })
@@ -64,8 +71,9 @@ module.exports = {
                 email=($5),
                 blood_type=($6),
                 weight=($7),
-                height=($8)
-            WHERE id = $9
+                height=($8),
+                id_instructor=($9)
+            WHERE id = $10
         `
 
         const values = [
@@ -77,13 +85,14 @@ module.exports = {
             data.blood_type,
             data.weight,
             data.height,
+            data.instructor,
             data.id
         ]
 
         db.query(query, values, (error, results) => {
             if (error) throw `DATABASE error! ${ error }`
             
-            callback()
+            callback(results.rows)
         })
 
     },
@@ -92,6 +101,16 @@ module.exports = {
             if (error) throw `DATABASE error! ${ error }`
 
             callback()
+        })
+    },
+    instructorsOptions(callback) {
+        db.query(`
+            SELECT name, id
+            FROM instructors
+        `, (error, results) => {
+            if (error) throw `DATABASE error! ${ error }`
+
+            callback(results.rows)
         })
     }
 }

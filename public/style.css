@@ -263,7 +263,7 @@ button[type="submit"],
 
 .table_container .instructors_table tr {
     display: grid;
-    grid-template-columns: 180px 1fr 86px;
+    grid-template-columns: 180px 1fr 86px 86px;
 }
 
 .table_container tbody tr:last-child {
@@ -295,7 +295,8 @@ button[type="submit"],
     box-shadow: -3px 2px 5px 0px rgba(0, 0, 0, 0.5); 
 }
 
-.table_container .instructors_table tbody tr td:last-child {
+.table_container .instructors_table tbody tr td:last-child,
+.table_container .instructors_table tbody tr td.members {
     display: flex;
     justify-content: center;
     align-items: center;

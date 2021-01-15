@@ -71,4 +71,19 @@
     </div>
 </label>
 
+<label>
+    <div class="item">
+        <div>Instrutor</div>
+        <div>
+            <select name="instructor">
+                <option value="A1" {{ 'selected' if member.create == true}} disabled>--</option>
+                
+                {% for option in options %}
+                    <option value="{{ option.id }}" {{ 'selected' if member.id_instructor == option.id }}>{{ option.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </div>
+</label>
+
 <button type="submit">Salvar</button>
