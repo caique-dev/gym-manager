@@ -19,7 +19,7 @@ module.exports = {
                     instructor.services = instructor.services.split(',')
                 })
 
-                console.log(foundInstructor)
+                // console.log(foundInstructor)
 
                 res.render('instructors/index', { instructors: foundInstructor, filter })
             }
