@@ -2,7 +2,15 @@
 
 {% block content %}
     <section class="card table_container">
-        <a href="/members/create">Novo</a>
+
+        <header class="filter">
+            <a class="simple_button" href="/members/create">Novo</a>
+
+            <form action="/members" method="get">
+                <input type="text" name="filter" placeholder="Nome ou E-mail" value="{{ filter }}">
+                <button type="submit">Filtrar</button>
+            </form>
+        </header>
 
         <table class="members_table">
             <thead>
@@ -35,5 +43,12 @@
                 {% endfor %}
             </tbody>
         </table>
+
+        <div class="pagination" 
+            data-page={{ pagination.page }} 
+            data-total={{ pagination.total }}
+            data-filter={{ filter }}
+        ></div>
+
     </section>    
 {% endblock content %}

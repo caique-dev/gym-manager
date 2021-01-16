@@ -7,7 +7,7 @@
             <a class="simple_button" href="/instructors/create">Novo</a>
 
             <form action="/instructors" method="get">
-                <input type="text" name="filter" placeholder="Filtrar por nome" value="{{ filter }}">
+                <input type="text" name="filter" placeholder="Nome ou Serviços" value="{{ filter }}">
                 <button type="submit">Filtrar</button>
             </form>
         </header>
@@ -43,8 +43,9 @@
         </table>
 
         <div class="pagination" 
-            data-page=15 
-            data-total=20
+            data-page={{ pagination.page }} 
+            data-total={{ pagination.total }}
+            data-filter={{ filter }}
         ></div>
 
     </section>

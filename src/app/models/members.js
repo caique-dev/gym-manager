@@ -112,5 +112,41 @@ module.exports = {
 
             callback(results.rows)
         })
+    },
+    paginate(params) {
+        const { filter, limit, offset, callback } = params
+
+        let query = "",
+            filterQuery = ``,
+            totalQuery = `(
+                SELECT COUNT(*) FROM members
+            ) AS total`
+
+        if (filter) {
+            filterQuery = `${query} 
+                WHERE members.name ILIKE '%${ filter }%'
+                OR members.services ILIKE '%${ filter }%'
+            `
+
+            totalQuery = `(
+                SELECT COUNT(*) FROM members
+                ${filterQuery}
+            ) AS total`
+        }
+
+        query = `
+            SELECT members.*, ${ totalQuery } 
+            FROM members
+            ${ filterQuery }
+            LIMIT $1 OFFSET $2
+        `
+
+        db.query(query, [limit, offset], (error, results) => {
+            if (error) throw `DATABASE error! ${ error }`
+
+            // console.log(results.rows)
+
+            callback(results.rows)
+        })
     }
 }

@@ -395,7 +395,7 @@ header.filter form button {
     border-bottom: solid 1px;
 }
 
-/* Remover notificação do Browser Sync
+/* Remover notificação do Browser Sync */
 body div#__bs_notify__ {
     display: none !important;
-} */
+}

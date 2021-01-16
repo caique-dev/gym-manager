@@ -3,9 +3,28 @@ const { age, blood_type, date } = require('../../lib/utilitarios')
 
 module.exports = {
     list(req, res) {
-        member.all( members => {
-            return res.render(`members/index`, { members })
-        })
+        let { filter, page, limit } = req.query
+
+        page = page || 1
+        limit = limit || 2
+        let offset = limit * (page - 1)
+
+        const params = {
+            filter,
+            limit,
+            offset,
+            callback(foundMembers) {
+
+                const pagination = {
+                    total: Math.ceil(foundMembers[0].total / limit),
+                    page
+                }
+
+                res.render('members/index', { members: foundMembers, filter, pagination })
+            }
+        }
+
+        member.paginate(params)
     },
     create(req, res) {
         member.instructorsOptions( instructorsOptions => {

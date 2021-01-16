@@ -112,8 +112,8 @@ module.exports = {
 
         if (filter) {
             filterQuery = `${query} 
-                WHERE instructor.name ILIKE '%${ filter }%'
-                OR instructor.services ILIKE '%${ filter }%'
+                WHERE instructors.name ILIKE '%${ filter }%'
+                OR instructors.services ILIKE '%${ filter }%'
             `
 
             totalQuery = `(
