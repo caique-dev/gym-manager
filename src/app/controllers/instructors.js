@@ -14,38 +14,23 @@ module.exports = {
             filter,
             limit,
             offset,
-            callback(foundInstructor) {
-                foundInstructor.forEach( instructor => {
+            callback(foundInstructors) {
+                foundInstructors.forEach( instructor => {
                     instructor.services = instructor.services.split(',')
                 })
 
-                // console.log(foundInstructor)
+                // console.log(foundInstructors)
 
-                res.render('instructors/index', { instructors: foundInstructor, filter })
+                const pagination = {
+                    total: Math.ceil(foundInstructors[0].total / limit),
+                    page
+                }
+
+                res.render('instructors/index', { instructors: foundInstructors, filter, pagination })
             }
         }
 
         instructors.paginate(params)
-
-        // if (filter) {
-        //     instructors.findBy(filter, instructors => {
-
-        //         instructors.forEach( instructor => {
-        //             instructor.services = instructor.services.split(',')
-        //         })
-
-        //         res.render('instructors/index', { instructors, filter })
-        //     })
-        // } else {
-        //    instructor.all( instructors => {
-        //         for (instructor_item of instructors) {
-        //             instructor_item.services = instructor_item.services.split(',')
-        //         }
-    
-        //         return res.render(`instructors/index`, { instructors })
-        //     })  
-        // }
-
     },
     create(req, res) {
         const instructor = { gender: 'F'}
