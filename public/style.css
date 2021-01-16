@@ -365,6 +365,36 @@ header.filter form button {
     height: 41px;
 }
 
+/* PAGINATION */
+.card.table_container {
+    display: grid;
+    grid-template: 64px 1fr 26px / 1fr;
+}
+
+.table_container .filter {
+    margin: 0;
+    align-self: start;
+}
+
+.table_container .pagination {
+    margin: 0;
+    align-self: end;
+    justify-self: center;
+}
+
+.pagination a,
+.pagination span {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-right: 16px;
+    transition: .4s;
+}
+
+.pagination a:hover {
+    filter: brightness(.3);
+    border-bottom: solid 1px;
+}
+
 /* Remover notificação do Browser Sync
 body div#__bs_notify__ {
     display: none !important;
