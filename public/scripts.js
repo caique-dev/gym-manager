@@ -32,15 +32,17 @@ function paginate(selectedPage, totalPages) {
 
 function instacePaginate() {
     const filter = pagination.dataset.filter
-    const page = +pagination.dataset.page
+    const currentPage = +pagination.dataset.page
     const total = +pagination.dataset.total
-    const pages = paginate(page, total)
+    const pages = paginate(currentPage, total)
 
     let elements = ''
 
     for (let page of pages) {
         if (String(page).includes('...')) elements += `<span>${ page }</span>`
-        else elements += `<a href="?page=${ page }&filter=${ filter }">${ page }</a>`
+        else elements += `<a ${page == currentPage? 'class="active"' : ''} href="?page=${ page }&filter=${ filter }">${ page }</a>`
+
+        // if (page == currentPage) page.classList.add('active')
     }
 
     pagination.innerHTML = elements
@@ -49,3 +51,16 @@ function instacePaginate() {
 const pagination = document.querySelector('.pagination')
 
 if (pagination) instacePaginate()
+
+// Foto do cadastro
+function avatarPhoto() {
+    const avatarMoldure = document.querySelector('.card .avatar')
+
+    photoInput.addEventListener('change', () => {
+        avatarMoldure.style.backgroundImage = `url(${photoInput.value})`
+    })
+}
+
+const photoInput = document.querySelector('.item input[name="avatar_url"]')
+
+if (photoInput) avatarPhoto()

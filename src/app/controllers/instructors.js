@@ -15,18 +15,22 @@ module.exports = {
             limit,
             offset,
             callback(foundInstructors) {
+                if (!foundInstructors.length) return res.redirect('instructors/create')
+
                 foundInstructors.forEach( instructor => {
                     instructor.services = instructor.services.split(',')
                 })
 
-                // console.log(foundInstructors)
+                let total
+                if (filter == '' || filter == null) total = 20
+                else total = Math.ceil(foundInstructors[0].total / limit)
 
                 const pagination = {
-                    total: Math.ceil(foundInstructors[0].total / limit),
+                    total,
                     page
                 }
 
-                res.render('instructors/index', { instructors: foundInstructors, filter, pagination })
+                res.render('instructors/index', { instructors: foundInstructors, page, filter, pagination})
             }
         }
 

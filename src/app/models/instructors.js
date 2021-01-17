@@ -13,6 +13,8 @@ module.exports = {
         `, (error, results) => {
             if (error) throw `DATABASE erro! ${ error }`
 
+            console.log(results.rows)
+
             callback(results.rows)
         })
     },
@@ -134,7 +136,7 @@ module.exports = {
         db.query(query, [limit, offset], (error, results) => {
             if (error) throw `DATABASE error! ${ error }`
 
-            // console.log(results.rows)
+            console.log(results.rows)
 
             callback(results.rows)
         })

@@ -14,9 +14,14 @@ module.exports = {
             limit,
             offset,
             callback(foundMembers) {
+                if (!foundMembers.length) return res.redirect('members/create')
+
+                let total
+                if (filter == '' || filter == null) total = 20
+                else total = Math.ceil(foundMembers[0].total / limit)
 
                 const pagination = {
-                    total: Math.ceil(foundMembers[0].total / limit),
+                    total,
                     page
                 }
 

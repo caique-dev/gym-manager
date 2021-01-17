@@ -390,7 +390,7 @@ header.filter form button {
     transition: .4s;
 }
 
-.pagination a:hover {
+.pagination a:hover, .pagination a.active {
     filter: brightness(.3);
     border-bottom: solid 1px;
 }

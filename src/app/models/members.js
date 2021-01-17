@@ -125,7 +125,7 @@ module.exports = {
         if (filter) {
             filterQuery = `${query} 
                 WHERE members.name ILIKE '%${ filter }%'
-                OR members.services ILIKE '%${ filter }%'
+                OR members.email ILIKE '%${ filter }%'
             `
 
             totalQuery = `(
